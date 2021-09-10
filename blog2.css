@@ -23,6 +23,7 @@ body {
 }
 .body-box {
     width: 96%;
+    max-width: 1000px;
     height: auto;
     border: 0px solid darkslategray;
     padding: 10px;
