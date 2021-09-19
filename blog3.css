@@ -30,6 +30,7 @@
     padding: 10px;
     font-family: -apple-system;
     justify-content: center;
+    max-width: 1550px;
 }
 
 .button {
