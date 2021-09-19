@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="blog3.css">
+    </head>
+    <body class="page">
+        <div class="left">
+            <div class="button" href="index.html">
+                <a href="index.html"> <h3>&lt;-- Take Me Back</h3></a>
+            </div>
+        </div>
+        <div class="right">
+            <h1>Blog 3 (9/16)</h1>
+            <p>
+                During this week in class I learned how to use flex to be able to make a sidebar like the one on the left.
+                I think this looks alot cleaner and makes it look like a semi-professional website.
+            </p>
+
+            <p>
+                During this week I also took the time to look into things you can do with embeded
+                photos. One of the things I saw you were able to do is change with the photos diffrent basic image filters called CSS filters,
+                 such as blur, inverted colors, and brightness. Below I will show some examples of what this looks like:
+            </p>
+            <div class="images">
+                <div class="image">
+                    <img src="https://www.midwestmoving.com/wp-content/uploads/2018/06/Traffic-Downtown-Chicago.jpg"
+                        width="300" alt="base photo of nyc">
+                    <figcaption><h4>Stock Photo</h4></figcaption>
+                </div>
+                <div class="image">
+                    <img class="brightness" src="https://www.midwestmoving.com/wp-content/uploads/2018/06/Traffic-Downtown-Chicago.jpg"
+                        width="300" alt="photo of nyc with brightness changed">
+                    <figcaption><h4>Brightness 80%</h4></figcaption>
+                </div>
+                <div class="image">
+                    <img class="contrast" src="https://www.midwestmoving.com/wp-content/uploads/2018/06/Traffic-Downtown-Chicago.jpg"
+                        width="300" alt="photo of nyc with contrast changed">
+                        <figcaption><h4>Contrast 130%</h4></figcaption>
+                </div>
+                <div class="image">
+                    <img class="blurred" src="https://www.midwestmoving.com/wp-content/uploads/2018/06/Traffic-Downtown-Chicago.jpg"
+                        width="300" alt="photo of nyc with image blur added">
+                        <figcaption><h4>Blurred 2px</h4></figcaption>
+                </div>
+                <div class="image">
+                   <img class="opacity" src="https://www.midwestmoving.com/wp-content/uploads/2018/06/Traffic-Downtown-Chicago.jpg"
+                       width="300" alt="photo of nyc with opacity changed">
+                        <figcaption><h4>Opacity 30%</h4></figcaption>
+                </div>
+                <div class="image">
+                    <img class="saturation" src="https://www.midwestmoving.com/wp-content/uploads/2018/06/Traffic-Downtown-Chicago.jpg"
+                        width="300" alt="photo of nyc with image saturation">
+                        <figcaption><h4>Saturation 150%</h4></figcaption>
+                </div>
+                <div class="image">
+                    <img class="huerotate" src="https://www.midwestmoving.com/wp-content/uploads/2018/06/Traffic-Downtown-Chicago.jpg"
+                        width="300" alt="photo of nyc with color rotation">
+                        <figcaption><h4>Hue-Rotation 40deg</h4></figcaption>
+                </div>
+                <div class="image">
+                    <img class="inverted" src="https://www.midwestmoving.com/wp-content/uploads/2018/06/Traffic-Downtown-Chicago.jpg"
+                        width="300" alt="photo of nyc with inverted colors">
+                        <figcaption><h4>Inverted Colors</h4></figcaption>
+                </div>
+            </div>
+
+            <p>
+                Those were just some fun things that you can do with embeded images.
+                The last cool thing I learned this week was how to implement a simple calculator.
+                Such as this...
+            </p>
+            <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+                <input type="number" id="b" name="b" value="0" /> +
+                <input type="number" id="a" name="a" value="0" /> =
+                <output name="result" for="a b">0</output>
+            </form>
+            <p>The code for the calculator is as follows.</p>
+            <div class="cd">
+                <code>&ltform oninput="result.value=parseInt(a.value)+parseInt(b.value)"&gt</code><br>
+                <code>&nbsp&nbsp&nbsp&nbsp&ltinput type="number" id="b" name="b" value="0" /&gt +</code><br>
+                <code>&nbsp&nbsp&nbsp&nbsp&ltinput type="number" id="a" name="a" value="0" /&gt =</code><br>
+                <code>&nbsp&nbsp&nbsp&nbsp&ltoutput name="result" for="a b"&gt0&lt/output&gt</code><br>
+                <code>&lt/form&gt</code>
+            </div>
+
+            <h3><br><br>Links I Used</h3>
+            <ul>
+                <li><a href="https://www.w3schools.com/cssref/css3_pr_filter.asp"> Photo Filters</a></li>
+                <li><a href="https://javascript.plainenglish.io/9-cool-things-you-can-do-with-just-html-3f926455a3c2"> Simple Calculator</a></li>
+            </ul>
+            
+            
+        </div>
+    </body>
+</html>
