@@ -96,6 +96,7 @@ h4 {
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 1500px;
+    align-self: center;
 }
 
 .cd {
