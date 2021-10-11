@@ -1,0 +1,63 @@
+h1 {
+    margin:5px;
+    color: cadetblue;
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width:100vw;
+    height: 50px;
+    margin:0;
+    padding:5px;
+    padding-left: 10px;
+    background-color: white;
+}
+
+body {
+    background-color: cadetblue;
+    margin:0;
+}
+
+.menupic {
+    filter: invert(100%) hue-rotate(180deg) ;
+    margin: 5px;
+    margin-right: 20px;
+}
+
+#bod {
+    justify-content: safe;
+}
+
+.clock {
+    position: absolute;
+    /*top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);*/
+    margin:20px;
+    color: white;
+    font-size: 60px;
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;;
+}
+
+p {
+    margin: 20px;
+    color: white;
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;;
+}
+
+img {
+    margin:20px;
+}
+
+.links {
+    color:white;
+    margin-right:50px;
+    margin-left:50px;
+    margin-top:60px;
+    
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  }

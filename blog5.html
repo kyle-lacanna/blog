@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="blog5.css">
+    </head>
+    <body>
+        <div id="header">
+            <div>
+                <h1>Blog Week 5 10/10</h1>
+            </div>
+            <div class="menupic">
+                <a href="index.html"><img src="list.png" width="40"></a>
+            </div>
+        </div>
+        <div id="bod">
+            <p>
+                This week for my blog I wanted to learn how to do something neat in JavaScript.
+                I first looked up cool things to do in JS but saw a buch of really complicated things.
+                Then I remembered about the date object we used in one of the labs and looked up things I could do with that.
+                I then saw it has a field for hour minute and seconds and decided to make a clock.
+                The clock could be implemented on a store website for when the release something or be used for a New Years
+                Eve Clock to watch for midnight. To do this was fairly simple and used a function that created a new date object and then formatted a string
+                with the hours, minutes, and seconds. I then updated the div in the html body and it shows the updated
+                time on the page. Below is the live clock I implemented.
+            </p>
+            <div id="ClockDisplay" class="clock" onload="timer()"></div>
+            <br><br><br><br><br><br>
+            <p>
+                I am still trying to learn more JavaScript and how it can be used but I thought this was really cool.
+                I would have done more with it but unfotunatly this week I was very limited on time with a bunch of job interviews that I needed to attend throughout the state.
+            </p>
+            <p>
+                Below is some of the code that I used to help make the clock...
+            </p>
+            <img src="timer_code.png" width="400">
+
+            <div class="links">
+                <h3>Links I Used</h3>
+                <ul>
+                    <li><a href="https://www.w3schools.com/js/js_dates.asp"> <h4>Date Object</h4></a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </body>
+    <script>
+        function timer()
+        {
+            var date = new Date();
+            var h = date.getHours(); // 24hr format
+            var m = date.getMinutes();
+            var s = date.getSeconds();
+            var half = "AM";
+
+            if (h == 0)
+            {
+                h = 12;
+            }
+
+            if (h > 12)
+            {
+                half = "PM";
+                h = h % 12;
+            }
+
+            h = (h < 10) ? "0"+ h : h;
+            m = (m < 10) ? "0"+ m : m;
+            s = (s < 10) ? "0"+ s : s;
+            var time = h + ":" + m + ":" + s + " " + half;
+
+            document.getElementById("ClockDisplay").innerText = time;
+            document.getElementById("ClockDisplay").textContent = time;
+            setTimeout(timer, 1000);
+        }
+        timer();
+    </script>
+</html>
