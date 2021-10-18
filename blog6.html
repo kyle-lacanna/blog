@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="blog6.css"/>
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        
+    </head>
+    <body>
+        <div id="header">
+            <div>
+                <h1>Blog Week 6 10/11-10/15</h1>
+            </div>
+            <div class="menupic">
+                <a href="index.html"><img src="listg.png" width="40"></a>
+            </div>
+        </div>
+
+        <div id="bod">
+            <p>
+                This week I progressed my Javascript abilities and learned how to make a slider for images.
+                This type of display could be useful for any type of store, showcase, or even ads. I made a simple one with next and Previous buttons,
+                but in the future I would like to expand it to automatically scoll through after a given time. I had a lot of fun with this and it was alittle challenging.
+            </p>
+            <br>
+            <p>
+                The slider works by assigning each image and index in a sort of array. Then when the next or prev button
+                is pressed the count var is updates to only show the current image by translating the x direction attribute in the array of images.
+            </p>
+        </div>
+
+        <div class="slider-container">
+            <div class="slide">
+                <img src="img1.jpeg" class="slide-img" alt="" />
+            </div>
+            <div class="slide">
+                <img src="img2.jpeg" class="slide-img" alt="" />
+            </div>
+            <div class="slide">
+                <img src="img3.jpeg" class="slide-img" alt="" />
+            </div>
+            <div class="slide">
+                <div>
+                    <img src="img4.jpeg" class="slide-img" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="btn-container">
+            <button type="button" class="prevBtn">
+                prev
+            </button>
+            <button type="button" class="nextBtn">
+                next
+            </button>
+        </div>
+
+        <div id="bod">
+            <p>
+                Below is some of the code that makes the slider work.
+            </p>
+            <br>
+            <img src="slider_ss.png" width="500">
+        </div>
+        <div class="links">
+            <h3>Links I Used</h3>
+            <ul>
+                <li><a href="https://www.freecodecamp.org/news/javascript-projects-for-beginners/#how-to-create-an-image-slider"> <h4>Image Slider</h4></a></li>
+            </ul>
+            <br>
+        </div>
+
+          <script>
+                const slides = document.querySelectorAll(".slide");
+                const nextBtn = document.querySelector(".nextBtn");
+                const prevBtn = document.querySelector(".prevBtn");
+                slides.forEach(function (slide, index) {
+                    slide.style.left = `${index * 100}%`;
+                });
+                let counter = 0;
+                nextBtn.addEventListener("click", function () {
+                    counter++;
+                    carousel();
+                });
+
+                prevBtn.addEventListener("click", function () {
+                    counter--;
+                    carousel();
+                });
+
+                function carousel() {
+                    if (counter < slides.length - 1) {
+                        nextBtn.style.display = "block";
+                    } else {
+                        nextBtn.style.display = "none";
+                    }
+                    if (counter > 0) {
+                        prevBtn.style.display = "block";
+                    } else {
+                        prevBtn.style.display = "none";
+                    }
+                    slides.forEach(function (slide) {
+                        slide.style.transform = `translateX(-${counter * 100}%)`;
+                    });
+                }
+
+                prevBtn.style.display = "none";
+          </script>
+    </body>
+</html>
